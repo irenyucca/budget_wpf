@@ -1,0 +1,9 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:HomeBudgetWPF" x:Class="HomeBudgetWPF.MainWindow"
+        Title="MainWindow" Height="478.358" Width="901.12" Closed="Window_Closed_1">
+    <Grid>
+
+        <local:ExpenseCtrl HorizontalAlignment="Left" Margin="335,19,0,0" VerticalAlignment="Top" x:Name="ctrl" Height="429" Width="509"/>
+        <local:PeriodTreeCtrl HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" x:Name="tree"/>
+
+    </Grid>
+</Window>
