@@ -15,9 +15,9 @@ namespace HomeBudgetWPF
         private ObservableCollection<Expense> expenses = new ObservableCollection<Expense>();
         private double totalExpense;
         BudgetDBContext dbContext;
-        public ExpensesViewModel(BudgetDBContext dbContext)
+        public ExpensesViewModel(BudgetDBContext dbContext, int recid)
         {
-            foreach (Expense exp in dbContext.Periods.First().Expenses)
+            foreach (Expense exp in dbContext.Periods.Find(recid).Expenses)
             {
                 this.expenses.Add(exp);
                 totalExpense += exp.Amount;

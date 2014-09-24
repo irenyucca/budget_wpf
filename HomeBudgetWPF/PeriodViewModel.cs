@@ -13,10 +13,10 @@ namespace HomeBudgetWPF
         public Period period;
         private double expended;
         public ExpensesViewModel expensesViewModel;
-        public PeriodViewModel(BudgetDBContext dbContext)
+        public PeriodViewModel(BudgetDBContext dbContext, int recid)
         {
-            this.period = dbContext.Periods.Find(2);
-            this.expensesViewModel = new ExpensesViewModel(dbContext);
+            this.period = dbContext.Periods.Find(recid);
+            this.expensesViewModel = new ExpensesViewModel(dbContext, recid);
         }
         public string Name
         {

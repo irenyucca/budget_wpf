@@ -28,7 +28,7 @@ namespace HomeBudgetWPF
         {
             InitializeComponent();
             
-            periodView = new PeriodViewModel(DataContextHolder.Instance.BugdetBD);
+            periodView = new PeriodViewModel(DataContextHolder.Instance.BugdetBD, 3);
             ctrl.DataContext = periodView;
             ctrl.ExpDataGrid.DataContext = periodView.Expenses;
             
